@@ -209,6 +209,35 @@ const Bar = () => {
       <div className="flex-1 p-6 overflow-auto">
         <Outlet context={{ filteredBooks, searchTerm }} />
       </div>
+
+       {/* Footer */}
+      <footer className="text-gray-300">
+        <div className="max-w-xl mx-auto px-2">
+          <div className="text-center text-sm text-black pt-2">
+            <p>© 2025 BookVault. All rights reserved.</p>
+            <div className="flex justify-center gap-4 mt-1">
+              <a
+                href="#"
+                className="text-black hover:font-bold hover:text-md cursor-pointer"
+              >
+                Whatsapp
+              </a>
+              <a
+                href="#"
+                className="text-black hover:font-bold hover:text-md cursor-pointer"
+              >
+                Facebook
+              </a>
+              <a
+                href="#"
+                className="text-black hover:font-bold hover:text-md cursor-pointer"
+              >
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
