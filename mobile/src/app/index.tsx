@@ -1,11 +1,31 @@
-import React from 'react'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login from "./Auth/Login";
+import Register from "./Auth/Register";
+import Book from "./Auth/Book";
 
-type Props = {}
+export type RootStackParamList = {
+  Login: undefined;
+  Register: undefined;
+  Book: { user: any };
+};
 
-const index = (props: Props) => {
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const App: React.FC = () => {
   return (
-    <div>GGs eh?</div>
-  )
-}
+   
+      <Stack.Navigator
+        initialRouteName="Login"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Book" component={Book} />
+      </Stack.Navigator>
+   
+  );
+};
 
-export default index
+export default App;
