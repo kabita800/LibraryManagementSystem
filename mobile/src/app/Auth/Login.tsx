@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   icon: { marginRight: 10 },
   input: { flex: 1, fontSize: 16 },
   loginButton: {
-    backgroundColor: "#ff7f50",
+    backgroundColor: "#fb923c",
     paddingVertical: 15,
     borderRadius: 15,
     marginBottom: 10,
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   link: { textAlign: "center", fontSize: 14, color: "#555", marginBottom: 15 },
-  linkHighlight: { color: "#ff7f50", fontWeight: "bold" },
+  linkHighlight: { color: "#fb923c", fontWeight: "bold" },
   orText: { textAlign: "center", marginVertical: 10, color: "#555" },
   socialContainer: {
     flexDirection: "row",

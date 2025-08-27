@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   button: {
-    backgroundColor: "#f97316",
+    backgroundColor: "#fb923c",
     paddingVertical: 15,
     borderRadius: 15,
     marginBottom: 15,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     fontWeight: "normal",
   },
   linkHighlight: {
-    color: "#f97316",
+    color: "#fb923c",
     fontWeight: "bold",
   },
 });
