@@ -9,12 +9,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:8081"];
+const allowedOrigins = ["http://localhost:5173", "http://localhost:8081", "*", "resplendent-dasik-749f7b.netlify.app" ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin) return callback(null, true); // allow mobile/native apps (no origin)
+      if (!origin) return callback(null, true); // allow mobile/native apps 
       if (allowedOrigins.indexOf(origin) === -1) {
         const msg =
           "The CORS policy for this site does not allow access from the specified Origin.";
