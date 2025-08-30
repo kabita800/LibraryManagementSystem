@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:8081", "*", "resplendent-dasik-749f7b.netlify.app" ];
+const allowedOrigins = ["http://localhost:5173", "http://localhost:8081", "*", "https://librarymanagementsystem-2-k7lk.onrender.com" ];
 
 app.use(
   cors({
