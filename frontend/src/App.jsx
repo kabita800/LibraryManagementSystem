@@ -62,7 +62,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Borrower routes */}
+        {/* Borrower routes ("/" is home) */}
         <Route
           element={
             <ProtectedRoute allowedRoles={["borrower"]}>
@@ -70,7 +70,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<Home />} />
+          <Route index element={<Home />} />  {/* "/" renders Home */}
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="book" element={<Book search={search} />} />
           <Route path="aboutus" element={<AboutUs />} />
@@ -79,16 +79,17 @@ function App() {
 
         {/* Librarian routes */}
         <Route
+          path="/librarian"
           element={
             <ProtectedRoute allowedRoles={["librarian"]}>
               <LibrarianLayout />
             </ProtectedRoute>
           }
         >
-          <Route path="librarian/dashboard" element={<LibrarianDashboard />} />
-          <Route path="librarian/managebooks" element={<ManageBooks />} />
-          <Route path="librarian/addbooks" element={<AddBooks />} />
-          <Route path="librarian/borrowrecord" element={<BorrowRecords />} />
+          <Route path="dashboard" element={<LibrarianDashboard />} />
+          <Route path="managebooks" element={<ManageBooks />} />
+          <Route path="addbooks" element={<AddBooks />} />
+          <Route path="borrowrecord" element={<BorrowRecords />} />
         </Route>
 
         {/* Logout */}

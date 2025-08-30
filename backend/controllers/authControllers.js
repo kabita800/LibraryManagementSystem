@@ -8,8 +8,10 @@ exports.registerUser = async (req, res) => {
       return res.status(400).json({ message: "Invalid name" });
     const existingUser = await User.findOne({ email });
 
-     if (!password || password.length < 6) {
-      return res.status(400).json({ message: "Password must be at least 6 characters" });
+    if (!password || password.length < 6) {
+      return res
+        .status(400)
+        .json({ message: "Password must be at least 6 characters" });
     }
 
     if (existingUser)
@@ -22,7 +24,6 @@ exports.registerUser = async (req, res) => {
     res.status(500).json({ message: "Registration failed" });
   }
 };
-
 
 exports.loginUser = async (req, res) => {
   try {

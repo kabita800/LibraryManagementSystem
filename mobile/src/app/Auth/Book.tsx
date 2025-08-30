@@ -11,7 +11,7 @@ import {
   StyleSheet,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import API from "../../api"; // make sure this points to your axios instance
+import API from "../../api"; 
 
 const profileImage = require("../../assets/images/undraw_female-avatar_7t6k.png");
 
@@ -181,7 +181,7 @@ const Book: React.FC = () => {
               <View style={styles.bookImageContainer}>
                 {book.photo ? (
                   <Image
-                    source={{ uri: `http://192.168.1.66:5000${book.photo}` }}
+                    source={{ uri: `http://192.168.100.52:5000${book.photo}` }}
                     style={styles.bookImage}
                   />
                 ) : (
